@@ -17,7 +17,7 @@ Feature: Gestión de registro y login de usuarios
     Then la respuesta debe devolver un código de respuesta 201
     And debe mostrar un mensaje "User account created successfully"
     And debe asignar un id único al nuevo usuario
-    And debe debe contener los siguientes datos enviados
+    And debe contener los siguientes datos enviados
       | name		| email 			|
       | prueba	    | prueba@test.com   |
 
@@ -31,10 +31,10 @@ Feature: Gestión de registro y login de usuarios
     When realizo una petición POST al endpoint "/users/login"
     Then la respuesta debe devolver un código de respuesta 200
     And debe mostrar un mensaje "Login successful"
-    And debe debe contener los siguientes campos:
+    And debe contener los siguientes campos:
       | name    |
       | email   |
-    And debe generar un token
+    And debe generar un token de autenticación
 
 
   # -----------------------------
@@ -48,7 +48,7 @@ Feature: Gestión de registro y login de usuarios
     When realizo una petición POST al endpoint "/users/register"
     Then la respuesta debe devolver un código de respuesta 409
     And debe mostrar un mensaje "An account already exists with the same email address"
-    And debe debe contener los siguientes datos enviados
+    And debe contener los siguientes campos:
       | success	  |
       | status    |
       | message   |
@@ -60,7 +60,7 @@ Feature: Gestión de registro y login de usuarios
     When realizo una petición POST al endpoint "/users/login"
     Then la respuesta debe devolver un código de respuesta 401
     And debe mostrar un mensaje "Incorrect email address or password"
-    And debe debe contener los siguientes datos enviados
+    And debe contener los siguientes campos:
       | success	  |
       | status    |
       | message   |
