@@ -26,19 +26,24 @@ public class TheSimpsonsApiTests {
 
     @Test
     @DisplayName("CP01 - Consultar listado de personajes paginado, validar campos obligatorios")
-    public void validarCamposObligatoriosListadoPersonajes(){
+    public void validarCamposObligatoriosYTiposListadoPersonajes(){
         given().
                 log().all().
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("$", hasKey("count")).
                 body("$", hasKey("next")).
                 body("$", hasKey("prev")).
                 body("$", hasKey("pages")).
-                body("$", hasKey("results"));
+                body("$", hasKey("results")).
+                body("count", instanceOf(Integer.class)).
+                body("next", anyOf(nullValue(), instanceOf(String.class))).
+                body("prev", anyOf(nullValue(), instanceOf(String.class))).
+                body("pages", instanceOf(Integer.class)).
+                body("results", instanceOf(List.class));
     }
 
     @Test
@@ -46,9 +51,9 @@ public class TheSimpsonsApiTests {
     public void validarTipoContendidoListadoPersonajes(){
         given().
                 log().all().
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 contentType("application/json; charset=utf-8");
@@ -59,9 +64,9 @@ public class TheSimpsonsApiTests {
     public void validarEstructuraMinimaPersonaListadoPersonajes(){
         given().
                 log().all().
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("results", not(empty())).
@@ -73,7 +78,16 @@ public class TheSimpsonsApiTests {
                 body("results.every { it.containsKey('occupation') }",  is(true)).
                 body("results.every { it.containsKey('portrait_path') }",  is(true)).
                 body("results.every { it.containsKey('phrases') }",  is(true)).
-                body("results.every { it.containsKey('status') }",  is(true));
+                body("results.every { it.containsKey('status') }",  is(true)).
+                body("results.id", everyItem(anyOf(nullValue(), instanceOf(Integer.class)))).
+                body("results.age", everyItem(anyOf(nullValue(), instanceOf(Integer.class)))).
+                body("results.birthdate", everyItem(anyOf(nullValue(), instanceOf(String.class)))).
+                body("results.gender", everyItem(anyOf(nullValue(), instanceOf(String.class)))).
+                body("results.name", everyItem(anyOf(nullValue(), instanceOf(String.class)))).
+                body("results.occupation", everyItem(anyOf(nullValue(), instanceOf(String.class)))).
+                body("results.portrait_path", everyItem(anyOf(nullValue(), instanceOf(String.class)))).
+                body("results.phrases", everyItem(instanceOf(List.class))).
+                body("results.status", everyItem(anyOf(nullValue(), instanceOf(String.class))));
     }
 
     @Test
@@ -81,14 +95,13 @@ public class TheSimpsonsApiTests {
     public void validarPrimeraPaginaSinIndicadorDePaginaListadoPersonajes(){
         given().
                 log().all().
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("prev", nullValue()).
-                body("next", notNullValue()).
-                body("next", containsString("page=2"));
+                body("next", allOf(notNullValue(), instanceOf(String.class), containsString("page=2")));
     }
 
     @Test
@@ -97,14 +110,13 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 param("page", 1).
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("prev", nullValue()).
-                body("next", notNullValue()).
-                body("next", containsString("page=2"));
+                body("next", allOf(notNullValue(), instanceOf(String.class), containsString("page=2")));
     }
 
     @Test
@@ -113,13 +125,13 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 param("page", 2).
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
-                body("prev", allOf(notNullValue(), containsString("page=1"))).
-                body("next", allOf(notNullValue(), containsString("page=3")));
+                body("prev", allOf(notNullValue(), instanceOf(String.class), containsString("page=1"))).
+                body("next", allOf(notNullValue(), instanceOf(String.class), containsString("page=3")));
     }
 
     @Test
@@ -128,13 +140,13 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 param("page", 59).
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
-                body("prev", allOf(notNullValue(), containsString("page=58"))).
-                body("next", allOf(notNullValue(), containsString("page=60")));
+                body("prev", allOf(notNullValue(), instanceOf(String.class), containsString("page=58"))).
+                body("next", allOf(notNullValue(), instanceOf(String.class), containsString("page=60")));
     }
 
     @Test
@@ -143,12 +155,12 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 param("page", 60).
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
-                body("prev", allOf(notNullValue(), containsString("page=59"))).
+                body("prev", allOf(notNullValue(), instanceOf(String.class), containsString("page=59"))).
                 body("next", nullValue());
     }
 
@@ -158,14 +170,14 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 param("page", 61).
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("prev", nullValue()).
                 body("next", nullValue()).
-                body("results", empty());
+                body("results", allOf(instanceOf(List.class), empty()));
     }
 
     @Test
@@ -173,12 +185,12 @@ public class TheSimpsonsApiTests {
     public void validarCalculoMetadatosListadoPersonajes(){
         given().
                 log().all().
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
-                body("count", allOf(notNullValue(), equalTo(1182))).
+                body("count", allOf(notNullValue(), greaterThanOrEqualTo(0), equalTo(1182))).
                 body("results.size()", lessThanOrEqualTo(20));
     }
 
@@ -186,14 +198,14 @@ public class TheSimpsonsApiTests {
     @DisplayName("CP11 - Consultar listado de personajes paginado, validar orden")
     public void validarOrdenAscendenteListadoPersonajes(){
         List<Integer> ids = given().
-                        log().all().
+                log().all().
                 when().
-                        get("/characters").
+                get("/characters").
                 then().
-                        log().all().
-                        statusCode(HttpStatus.SC_OK).
-                        extract().
-                            path("results.id");
+                log().all().
+                statusCode(HttpStatus.SC_OK).
+                extract().
+                path("results.id");
 
         List<Integer> idsOrdenados = new ArrayList<>(ids);
         Collections.sort(idsOrdenados);
@@ -207,9 +219,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 pathParam("id", 3).
-        when().
+                when().
                 get("/characters/{id}").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("$", hasKey("id")).
@@ -220,7 +232,16 @@ public class TheSimpsonsApiTests {
                 body("$", hasKey("occupation")).
                 body("$", hasKey("portrait_path")).
                 body("$", hasKey("phrases")).
-                body("$", hasKey("status"));
+                body("$", hasKey("status")).
+                body("id", anyOf(nullValue(), instanceOf(Integer.class))).
+                body("age", anyOf(nullValue(), instanceOf(Integer.class))).
+                body("birthdate", anyOf(nullValue(), instanceOf(String.class))).
+                body("gender", anyOf(nullValue(), instanceOf(String.class))).
+                body("name", anyOf(nullValue(), instanceOf(String.class))).
+                body("occupation", anyOf(nullValue(), instanceOf(String.class))).
+                body("portrait_path", anyOf(nullValue(), instanceOf(String.class))).
+                body("phrases", instanceOf(List.class)).
+                body("status", anyOf(nullValue(), instanceOf(String.class)));
     }
 
     @Test
@@ -229,9 +250,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 pathParam("id", 1).
-        when().
+                when().
                 get("/characters/{id}").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("name", equalTo("Homer Simpson"));
@@ -243,9 +264,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 pathParam("id", 1).
-        when().
+                when().
                 get("/characters/{id}").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("birthdate", matchesRegex("^\\d{4}-\\d{2}-\\d{2}$"));
@@ -257,9 +278,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 pathParam("id", 1).
-        when().
+                when().
                 get("/characters/{id}").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("portrait_path", matchesPattern("^/character/\\d+.webp$"));
@@ -271,9 +292,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 pathParam("id", 3).
-        when().
+                when().
                 get("/characters/{id}").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_OK).
                 body("phrases", allOf(not(empty()), instanceOf(List.class)));
@@ -285,9 +306,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 param("page", "test").
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_BAD_REQUEST).
                 body("$", hasKey("error")).
@@ -300,9 +321,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 param("page", 0).
-        when().
+                when().
                 get("/characters").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_BAD_REQUEST).
                 body("$", hasKey("error")).
@@ -316,9 +337,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 pathParam("id", idPersonajeNoExistente).
-        when().
+                when().
                 get("/characters/{id}").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_NOT_FOUND).
                 body("$", allOf(hasKey("error"), hasKey("id"))).
@@ -333,9 +354,9 @@ public class TheSimpsonsApiTests {
         given().
                 log().all().
                 pathParam("id", idPersonajeNoExistente).
-        when().
+                when().
                 get("/characters/{id}").
-        then().
+                then().
                 log().all().
                 statusCode(HttpStatus.SC_BAD_REQUEST).
                 body("$", allOf(hasKey("error"), hasKey("id"))).
