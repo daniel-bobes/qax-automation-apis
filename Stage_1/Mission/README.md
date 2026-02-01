@@ -26,3 +26,5 @@ En esta `Mission`, he puesto en práctica el diseño de casos de prueba utilizan
 
 ### Resultados de la ejecución
 En el archivo [Reporte de la ejecución](./Reporte%20de%20la%20ejecución.pdf) se pueden visualizar los resultados de la ejecución de las pruebas. Cabe destacar que aunque hay tests fallidos esto se debe a discrepancias entre los criterios de aceptación y la API `The Simpsons`, que en algunos casos no cumple los criterios de aceptación definidos en la `Mission`.
+
+Se puede encontrar el listado de bugs encontrados en el archivo detallado: [Reporte_Bugs.md](Reporte_Bugs.md)
