@@ -5,7 +5,9 @@ ___
 - **Descripción del error:** Al consultar la lista de personajes indicando el parámetro `page` con un valor no entero o entero menor a 1 comprobamos que la API no realiza ninguna validación.
 - **Resultado esperado:** Código de estado `400 Bad Request` y JSON de respuesta:
     ```json
-    {"error":  "Invalid page parameter"}
+    {
+      "error":  "Invalid page parameter"
+    }
     ```
 - **Resultado obtenido:** Código de estado `200 OK` y devuelve la lista de personajes.
 - **Impacto**: Permite realizar peticiones mal formadas que deberían ser rechazadas por el servidor.
@@ -56,10 +58,9 @@ ___
   ```
 - **Casos de prueba afectados:**
   - CP19 - Consultar detalle de un personaje inexistente, identificador numérico
-  - CP20 - Consultar detalle de un personaje inexistente, identificador no numérico
 ___
 
-## BUG 4 - Formato de Content-Type Incompleto
+## BUG 4 - Formato de Content-Type Incompleto al consultar el listado de personajes
 - **ID:** BUG-004
 - **Descripción del error:** Al consultar el listado de personajes, comprobamos que en el contenido del tipo de la respuesta "Content-Type" no se indica la especificación del charset.
 - **Resultado esperado:** application/json; charset=utf-8.
