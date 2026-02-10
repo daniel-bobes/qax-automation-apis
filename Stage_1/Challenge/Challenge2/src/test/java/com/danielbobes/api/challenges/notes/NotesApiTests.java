@@ -1,4 +1,4 @@
-package com.bobes.daniel;
+package com.danielbobes.api.challenges.notes;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
