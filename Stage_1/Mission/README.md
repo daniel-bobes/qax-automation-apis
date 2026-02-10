@@ -22,7 +22,7 @@ En esta `Mission`, he puesto en práctica el diseño de casos de prueba utilizan
     mvn surefire-report:report
     ```
 3. Maven ejecutará todas las pruebas automáticas que haya en el directorio `src/test/java` y subdirectorios.
-4. Maven nos mostrará los resultados de la ejecución en la terminal y también podremos consultar el reporte HTML generado en `target\reports\surefire.html`
+4. Maven nos mostrará los resultados de la ejecución en la terminal y también podremos consultar el reporte HTML generado en `target/reports/surefire.html`
 
 ### Resultados de la ejecución
 En el archivo [Reporte de la ejecución](./Reporte%20de%20la%20ejecución.pdf) se pueden visualizar los resultados de la ejecución de las pruebas. Cabe destacar que aunque hay tests fallidos esto se debe a discrepancias entre los criterios de aceptación y la API `The Simpsons`, que en algunos casos no cumple los criterios de aceptación definidos en la `Mission`.

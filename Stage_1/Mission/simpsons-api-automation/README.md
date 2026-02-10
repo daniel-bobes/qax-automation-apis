@@ -39,4 +39,4 @@ mvn clean test
 mvn surefire-report:report
 ```
 
-Podrás visualizar el reporte de la ejecución, situándote en el directorio `target\reports` y abriendo el archivo `surefire.html` en tu navegador favorito 🌐.
+Podrás visualizar el reporte de la ejecución, situándote en el directorio `target/reports` y abriendo el archivo `surefire.html` en tu navegador favorito 🌐.
