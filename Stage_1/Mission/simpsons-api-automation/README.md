@@ -5,8 +5,8 @@ Este framework es más eficiente que Homer en un buffet libre 🍩
 
 ## 🛠️ Tecnologías Usadas
 * **Java 11** ☕: lenguaje de programación principal utilizado para el desarrollo del framework de automatización.
-* **REST Assured** 🧪: biblioteca de Java de código abierto para simplificar las pruebas automatizadas y la validación de servicios web RESTFul.
-* **JUnit 5** ✅: framework de Java para pruebas unitarias.
+* **REST Assured** 🧪: biblioteca de Java de código abierto utilizada para simplificar las pruebas automatizadas y la validación de servicios web RESTFul.
+* **JUnit 5** ✅: framework de Java utilizado para simplificar las pruebas unitarias.
 * **Maven** 📦: Gestor de dependencias y automatización de la construcción del proyecto.
 
 ## 📂 Estructura del Proyecto
