@@ -15,7 +15,7 @@ En esta `Mission`, he puesto en práctica el diseño de casos de prueba utilizan
    - Verificar campos obligatorios en las respuestas.
 
 ### Ejecución de las pruebas
-1. Descargar el proyecto [Mission1](./simpsons-api-automation).
+1. Descargar el proyecto "[simpsons-api-automation](./simpsons-api-automation)".
 2. Abrir la terminal, situarse dentro del directorio del proyecto y ejecutar:
     ```bash
     mvn test
