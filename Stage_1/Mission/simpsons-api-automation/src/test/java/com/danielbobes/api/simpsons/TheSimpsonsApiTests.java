@@ -1,4 +1,4 @@
-package com.danielbobes.api.test;
+package com.danielbobes.api.simpsons;
 
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
