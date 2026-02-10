@@ -1,21 +1,21 @@
-# Mission 1 - Automatización de APISs - The Simpsons
+# Mission 1 - Automatización de APIs - The Simpsons
 
 - 📁 **Carpeta:** `Stage_1/Mission/`
-- 🎯 **Objetivo:** Poner en práctica la transformación de una historia de usuario y sus criterios de aceptación en casos de prueba claros utilizando la sintaxis de Gherkin para luego poner en práctica la automatizació de los casos de prueba definidos con Rest Assured y Java.
+- 🎯 **Objetivo:** Poner en práctica la transformación de una historia de usuario y sus criterios de aceptación en casos de prueba claros utilizando la sintaxis de Gherkin para luego poner en práctica la automatización de los casos de prueba definidos con Rest Assured y Java.
 ___ 
 ## Introducción
-En esta `Mission`, he puesto en práctica el diseño de casos de prueba utilizando Gherking y la automaticazión de los casos de prueba diseñados con Rest Assured y Java.
+En esta `Mission`, he puesto en práctica el diseño de casos de prueba utilizando Gherkin y la automatización de los casos de prueba diseñados con Rest Assured y Java.
 
 ### Instrucciones
-1. Diseñar los casos de prueba en lenguaje Gherkin que cubran todos los criterios de aceptacion .feature
-2. Craer una colección en Postman y validar manualmente que los endpoints respondan correctamente.
-3. Crear un nuevo proyecto Maven
+1. Diseñar los casos de prueba en lenguaje Gherkin que cubran todos los criterios de aceptación `.feature`.
+2. Creer una colección en Postman y validar manualmente que los endpoints respondan correctamente.
+3. Crear un nuevo proyecto Maven.
 4. Implementar los casos en Rest Assured siguiendo buenas prácticas:
    - Validar códigos HTTP.
    - Verificar campos obligatorios en las respuestas.
 
 ### Ejecución de las pruebas
-1. Descargar el proyecto [Mission1](./Mission1).
+1. Descargar el proyecto [Mission1](./simpsons-api-automation).
 2. Abrir la terminal, situarse dentro del directorio del proyecto y ejecutar:
     ```bash
     mvn test
