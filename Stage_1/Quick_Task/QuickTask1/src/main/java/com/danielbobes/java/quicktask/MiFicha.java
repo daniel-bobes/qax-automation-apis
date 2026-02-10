@@ -1,4 +1,4 @@
-package com.bobes.daniel;
+package com.danielbobes.java.quicktask;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
