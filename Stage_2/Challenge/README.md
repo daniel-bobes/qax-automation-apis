@@ -31,6 +31,29 @@ Para poder ejecutar el proyecto necesitas:
 5. Cucumber habrá generado el reporte en el directorio `target/cucumber-reports`.
 6. Accede al directorio anterior y abre el archivo `main-report.html` en tu navegador.
 
+=======
+
+___
+## ⚙️ Requisitos
+Para poder ejecutar el proyecto necesitas:
+* Java 11 instalado.
+* Maven instalado.
+* Una terminal de comandos o tu IDE de preferencia.
+
+## 🚀 Ejecución y reportes
+1. Clona o descarga el repositorio `https://github.com/daniel-bobes/qax-automation-apis.git`.
+2. Abre la terminal en la carpeta raíz `qax-automation-apis`.
+3. Sitúate en el directorio del proyecto con el comando:
+    ```bash
+    cd Stage_2/Challenge/jsonplaceholder-api-automation
+    ```
+4. Ejecuta el siguiente comando para ejecutar todas las suites de pruebas:
+    ```bash
+    mvn test
+    ```
+5. Cucumber habrá generado el reporte en el directorio `target/cucumber-reports`.
+6. Accede al directorio anterior y abre el archivo `main-report.html` en tu navegador.
+
 ## 📊️ Evidencias
 Puedes encontrar el reporte de la ejecución exitosa en la carpeta: 📁[ Ver Carpeta de Evidencias](./evidencias/challenge1)
 
