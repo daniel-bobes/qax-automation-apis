@@ -33,9 +33,9 @@ Para poder ejecutar el proyecto necesitas:
 6. Accede al directorio anterior y abre el archivo `main-report.html` en tu navegador.
 
 ## 📊️ Evidencias
-Puedes encontrar el reporte de la ejecución exitosa en la carpeta: [📁 Ver Carpeta de Evidencias](./evidencias/challenge1/JSONPlaceholder%20Cucumber%20Main%20Report.pdf)
+Puedes encontrar el reporte de la ejecución exitosa en la carpeta: 📁[ Ver Carpeta de Evidencias](./evidencias/challenge1)
 
-- Reporte HTML con la ejecución de todos los escenarios de prueba: [JSONPlaceholder Cucumber Main Report](./evidencias/challenge1/)
+- Reporte HTML con la ejecución de todos los escenarios de prueba: [JSONPlaceholder Cucumber Main Report](./evidencias/challenge1/JSONPlaceholder%20Cucumber%20Main%20Report.pdf)
 
 ## 🗒️ Historia de usuario: Gestión de Publicaciones y Comentarios
 **Como** tester de APIs<br>
