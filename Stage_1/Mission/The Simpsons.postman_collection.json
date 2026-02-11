@@ -1,0 +1,198 @@
+{
+  "info": {
+    "_postman_id": "5558ec65-05db-4a01-8603-39baf481311f",
+    "name": "The Simpsons",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44236320"
+  },
+  "item": [
+    {
+      "name": "Consultar listado de personajes sin paginación",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/characters",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "characters"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar listado de personajes con indicador de página",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/characters?page=5",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "characters"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar listado de personajes con indicador de página menor a 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/characters?page=0",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "characters"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar listado de personajes con indicador de página no númerico",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/characters?page=test",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "characters"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "test"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar detalle de un personaje",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/characters/:id",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "characters",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar detalle de un personaje que no existe",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/characters/:id",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "characters",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "2000"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar detalle de un personaje id no numérico",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/characters/:id",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "characters",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "test"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": ""
+    }
+  ]
+}
