@@ -1,24 +1,16 @@
 # Challenge
-- 📁 **Carpeta:** `Stage_2/Challenge`
-- 🎯 **Objetivo:** TBD
 
-___
+## ¿Qué es?
+Breve ejercicio de escenarios de complejidad media con criterios claros. Forma parte del **Stage_2** de la mentoría.
 
-# Challenge 1
-- 📁 **Carpeta:** `Stage_2/Challenge/Challenge1`
-- 🎯 **Objetivo:** TBD
-
-### Instrucciones
-1. Usando el proyecto creado en el ejercicio 1.
-2. Crear un nuevo archivo `.feature` con los siguientes escenarios:
-3. Agregar el nuevo endpoint de comments.
-4. Crear los nuevos modelos necesarios para serializar los request y response.
-5. Ejecutar todos los tests.
-
-    #### **Extra:** 
-    Investigar y demostrar cómo enviar datos desde un archivo `.feature` usando una tabla en Cucumber (DataTable) y cómo consumirlos en Java dentro del Step Definition.
-___
-
-# Challenge 2
-- 📁 **Carpeta:** `Stage_2/Challenge/Challenge2`
-- 🎯 **Objetivo:** TBD
+## Formato esperado de entrega
+- 📁 Carpeta: `Stage_2/Challenge/tu-entrega-aqui`
+- 🗒️ README.md por cada entrega con:
+   - **Título de la entrega**
+   - **Objetivo / Historia de usuario**
+   - **Criterios de aceptación**
+   - **Estrategia de prueba** (casos, datos, precondiciones)
+   - **Ejecución** (comandos o pasos)
+   - **Resultados** (evidencias, logs, capturas, reporte HTML/JSON)
+- 🧪 Código/archivos de soporte en subcarpetas (`src`, `tests`, `resources`, etc.) según la tecnología.
+- 🖼️ Evidencias en `evidencias/` cuando aplique.
