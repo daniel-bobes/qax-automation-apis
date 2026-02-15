@@ -1,3 +1,4 @@
+@NewContext
 Feature: Creación de usuario, generación de token y validación de información
 
   Scenario: CP-1 — Crear usuario exitosamente

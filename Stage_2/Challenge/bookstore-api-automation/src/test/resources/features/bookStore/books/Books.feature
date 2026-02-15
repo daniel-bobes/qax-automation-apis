@@ -1,3 +1,4 @@
+@NewContext
 Feature: Gestión del catálogo de libros
 
   Background: Preparación de la sesión y entorno
