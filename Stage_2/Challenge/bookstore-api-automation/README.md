@@ -50,17 +50,10 @@ Por el contrario, si deseas ejecutar una suite de pruebas concreta:
 
 Por ejemplo:
 ```bash
-mvn test -Dtest=CreatePostTestRunner
-mvn test -Dtest=CommentsTestRunner
-mvn test -Dtest=AllTestRunner
+mvn test -Dtest=MainRunner
 ```
 
 ## 📊 Reportes
 Trás la ejecución, se generan reportes detallados en la ruta `target/cucumber-reports`.
 
-En función de la suite de pruebas que hayas ejecutado tendrás:
-- `main-report.html` si has ejecutado todas las suites de pruebas.
-- `posts-report.html` si has ejecutado la suite `CreatePostTestRunner`.
-- `comments-report.html` si has ejecutado la suite `CommentsTestRunner`.
-
-Para visualizar el reporte solo tienes que abrir el reporte en tu navegador favorito 🌐.
+Para visualizar el reporte solo tienes que abrir el reporte `main-report.html` en tu navegador favorito 🌐.
