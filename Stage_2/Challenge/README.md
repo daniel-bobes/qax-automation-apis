@@ -118,7 +118,7 @@ Para poder ejecutar el proyecto necesitas:
 ___
 
 ## 📊️ Evidencias
-Puedes encontrar el reporte de la ejecución exitosa en la carpeta: 📁[ Ver Carpeta de Evidencias](./evidencias/challenge1)
+Puedes encontrar el reporte de la ejecución exitosa en la carpeta: 📁[ Ver Carpeta de Evidencias](./evidencias/challenge2)
 
 - Reporte HTML con la ejecución de todos los escenarios de prueba: [BookStore Cucumber Main Report](./evidencias/challenge2/BookStore%20Cucumber%20Main%20Report.pdf)
 
