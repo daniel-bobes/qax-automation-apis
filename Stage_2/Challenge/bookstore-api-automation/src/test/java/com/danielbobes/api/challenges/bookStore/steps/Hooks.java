@@ -1,6 +1,6 @@
-package com.danielbobes.api.bookStore.steps;
+package com.danielbobes.api.challenges.bookStore.steps;
 
-import com.danielbobes.api.bookStore.utils.RunContext;
+import com.danielbobes.api.challenges.bookStore.utils.RunContext;
 import io.cucumber.java.Before;
 
 public class Hooks {

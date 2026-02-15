@@ -1,4 +1,4 @@
-package com.danielbobes.api.bookStore.models.accounts;
+package com.danielbobes.api.challenges.bookStore.models.accounts;
 
 public class TokenResponse {
 

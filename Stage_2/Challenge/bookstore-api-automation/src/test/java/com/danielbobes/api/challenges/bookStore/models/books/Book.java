@@ -1,4 +1,4 @@
-package com.danielbobes.api.bookStore.models.books;
+package com.danielbobes.api.challenges.bookStore.models.books;
 
 public class Book {
 

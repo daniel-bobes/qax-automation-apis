@@ -1,4 +1,4 @@
-package com.danielbobes.api.bookStore.utils;
+package com.danielbobes.api.challenges.bookStore.utils;
 
 import java.security.SecureRandom;
 import java.util.*;

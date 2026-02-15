@@ -1,4 +1,4 @@
-package com.danielbobes.api.bookStore.config;
+package com.danielbobes.api.challenges.bookStore.config;
 
 public class Endpoints {
     private static final String ACCOUNT = "/Account/v1";

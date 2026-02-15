@@ -1,6 +1,6 @@
-package com.danielbobes.api.bookStore.config;
+package com.danielbobes.api.challenges.bookStore.config;
 
-import com.danielbobes.api.bookStore.utils.RunContext;
+import com.danielbobes.api.challenges.bookStore.utils.RunContext;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 

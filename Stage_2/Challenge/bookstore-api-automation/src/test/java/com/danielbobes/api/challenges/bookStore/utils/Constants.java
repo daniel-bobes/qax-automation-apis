@@ -1,4 +1,4 @@
-package com.danielbobes.api.bookStore.utils;
+package com.danielbobes.api.challenges.bookStore.utils;
 
 public final class Constants {
     public static final String LOWER_CASE_LETTERS = "abcdefghijklmnopqrstuvwxyz";

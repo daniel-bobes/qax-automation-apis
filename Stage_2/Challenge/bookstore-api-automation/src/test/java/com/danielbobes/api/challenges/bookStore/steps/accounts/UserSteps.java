@@ -1,14 +1,13 @@
-package com.danielbobes.api.bookStore.steps.accounts;
+package com.danielbobes.api.challenges.bookStore.steps.accounts;
 
-import com.danielbobes.api.bookStore.config.Config;
-import com.danielbobes.api.bookStore.config.Endpoints;
-import com.danielbobes.api.bookStore.models.accounts.TokenResponse;
-import com.danielbobes.api.bookStore.models.accounts.UserErrorResponse;
-import com.danielbobes.api.bookStore.models.accounts.UserRequest;
-import com.danielbobes.api.bookStore.models.accounts.UserResponse;
-import com.danielbobes.api.bookStore.utils.Constants;
-import com.danielbobes.api.bookStore.utils.RunContext;
-import com.danielbobes.api.bookStore.utils.Utils;
+import com.danielbobes.api.challenges.bookStore.config.Endpoints;
+import com.danielbobes.api.challenges.bookStore.models.accounts.TokenResponse;
+import com.danielbobes.api.challenges.bookStore.models.accounts.UserErrorResponse;
+import com.danielbobes.api.challenges.bookStore.models.accounts.UserRequest;
+import com.danielbobes.api.challenges.bookStore.models.accounts.UserResponse;
+import com.danielbobes.api.challenges.bookStore.utils.Constants;
+import com.danielbobes.api.challenges.bookStore.utils.RunContext;
+import com.danielbobes.api.challenges.bookStore.utils.Utils;
 
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.en.And;
@@ -25,7 +24,7 @@ import java.util.Objects;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
-import static com.danielbobes.api.bookStore.config.RequestSpecifications.*;
+import static com.danielbobes.api.challenges.bookStore.config.RequestSpecifications.*;
 
 public class UserSteps {
 

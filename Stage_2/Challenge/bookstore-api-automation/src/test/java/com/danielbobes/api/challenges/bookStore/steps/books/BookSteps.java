@@ -1,11 +1,11 @@
-package com.danielbobes.api.bookStore.steps.books;
+package com.danielbobes.api.challenges.bookStore.steps.books;
 
-import com.danielbobes.api.bookStore.config.Endpoints;
-import com.danielbobes.api.bookStore.models.books.AddBookRequest;
-import com.danielbobes.api.bookStore.models.books.AddBookResponse;
-import com.danielbobes.api.bookStore.models.books.BooksResponse;
-import com.danielbobes.api.bookStore.models.books.ISBN;
-import com.danielbobes.api.bookStore.utils.RunContext;
+import com.danielbobes.api.challenges.bookStore.config.Endpoints;
+import com.danielbobes.api.challenges.bookStore.models.books.AddBookRequest;
+import com.danielbobes.api.challenges.bookStore.models.books.AddBookResponse;
+import com.danielbobes.api.challenges.bookStore.models.books.BooksResponse;
+import com.danielbobes.api.challenges.bookStore.models.books.ISBN;
+import com.danielbobes.api.challenges.bookStore.utils.RunContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -16,7 +16,7 @@ import org.apache.http.HttpStatus;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static com.danielbobes.api.bookStore.config.RequestSpecifications.*;
+import static com.danielbobes.api.challenges.bookStore.config.RequestSpecifications.*;
 
 public class BookSteps {
 

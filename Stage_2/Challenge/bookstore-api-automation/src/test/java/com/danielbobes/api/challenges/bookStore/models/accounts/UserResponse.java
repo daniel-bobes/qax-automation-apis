@@ -1,6 +1,6 @@
-package com.danielbobes.api.bookStore.models.accounts;
+package com.danielbobes.api.challenges.bookStore.models.accounts;
 
-import com.danielbobes.api.bookStore.models.books.Book;
+import com.danielbobes.api.challenges.bookStore.models.books.Book;
 
 import java.util.List;
 
