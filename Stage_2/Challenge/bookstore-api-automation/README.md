@@ -13,7 +13,7 @@ Framework de automatización de pruebas para la API de **[BookStore API](https:/
 El framework sigue una organización modular basada en Maven para separar la lógica de las pruebas de la configuración.
 
 ```text
-jsonplaceholder-api-automation
+bookstore-api-automation
 ├── src
 │   └── test
 │       ├── java
