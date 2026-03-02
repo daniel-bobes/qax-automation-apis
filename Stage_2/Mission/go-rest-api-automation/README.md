@@ -1,4 +1,4 @@
-# Go REST API Automation
+# 🚀 Go REST API Automation
 
 Framework de automatización de pruebas para la API **[Go REST](https://gorest.co.in/)**, desarrollado con un enfoque profesional y mantenible.
 
@@ -14,7 +14,7 @@ Framework de automatización de pruebas para la API **[Go REST](https://gorest.c
 El framework sigue una organización modular para separar la lógica de las pruebas de la configuración.
 
 ```text
-simpsons-api-automation
+go-rest-api-automation
 ├── src
 │   └── test
 │       ├── java

@@ -1,14 +1,11 @@
 # 🚀 Misión: Proyecto de Automatización de APIs con Token – Go Rest API
 - 📁 **Carpeta:** `Stage_2/Mission/go-rest-api-automation`
 ___
-# Introducción
-En esta misión, he aprendido a crear un proyecto de automatización para testing de APIs robusto.
-
-Los pilares de mi implementación han sido:
-* Arquitectura modular: organización del proyecto para separar la lógica de las pruebas de la configuración.
+## 🎯 Objetivos
+* Arquitectura modular: separación clara de la lógica de las pruebas de la configuración.
 * Manejo de modelos (POJO): implementación de objetos Java para la serialización y deserialización de las peticiones y respuestas de la API.
-* BDD con Cucumber: implementación de los escenarios de prueba en Gherkin, permitiendo que las pruebas sean legibles y estén alineadas con los requisitos.
-* Gestión del contexto: gestión del contexto entre pasos de un escenario de prueba.
+* Cucumber: implementación de los escenarios de prueba en Gherkin, permitiendo que las pruebas sean legibles y estén alineadas con los requisitos.
+* Gestión del contexto: gestión del contexto compartido entre steps de un escenario de prueba.
 * Gestión de datos dinámicos: uso de JavaFaker para la generación de datos para las pruebas.
 ___
 ## ⚙️ Requisitos
@@ -42,6 +39,8 @@ Puedes encontrar el reporte de la ejecución exitosa en la carpeta: 📁[ Ver Ca
 **Para** que pueda asegurarme de que la API funciona correctamente y cumple los contratos esperados.
 
 ## ✅ Escenarios de prueba
+Puedes encontrar los escenarios de pruebas definidos en:
 * 📁[Usuarios](./go-rest-api-automation/src/test/resources/features/gorest/users)
 * 📁[Publicaciones](./go-rest-api-automation/src/test/resources/features/gorest/posts)
 * 📁[Comentarios](./go-rest-api-automation/src/test/resources/features/gorest/comments)
+* 📁[Recursos anidados](./go-rest-api-automation/src/test/resources/features/gorest/nested)
