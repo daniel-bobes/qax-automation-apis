@@ -31,7 +31,7 @@ Para poder ejecutar el proyecto necesitas:
 ## 📊️ Evidencias
 Puedes encontrar el reporte de la ejecución exitosa en la carpeta: 📁[ Ver Carpeta de Evidencias](./evidencias/)
 
-- Reporte HTML con la ejecución de todos los escenarios de prueba: [Go Rest Api Cucumber Main Report](./evidencias/NombreReporte.pdf)
+- Reporte HTML con la ejecución de todos los escenarios de prueba: [Go Rest Api Cucumber Main Report](./evidencias/Go%20Rest%20Api%20Cucumber%20Main%20Report.pdf)
 
 ## 🗒️ Historia de usuario:  Flujos de Prueba API Go Rest
 **Como** tester de APIs<br>
