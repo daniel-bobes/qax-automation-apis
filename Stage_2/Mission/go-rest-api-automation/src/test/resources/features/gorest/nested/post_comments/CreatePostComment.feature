@@ -25,14 +25,14 @@ Feature: Creación de Comentario en una Publicación
     And que preparo un comentario válido
     When realizo una petición para crear un comentario en la publicación
     Then la API responde con un código de estado 422
-    And la respuesta de error contiene el campo "user" y el mensaje "must exist"
+    And la respuesta de error contiene el campo "post" y el mensaje "must exist"
 
   Scenario: CP04 Crear comentario para una publicación eliminada previamente
     Given realizo una petición para eliminar la publicación
     And que preparo un comentario válido
     When realizo una petición para crear un comentario en la publicación
     Then la API responde con un código de estado 422
-    And la respuesta de error contiene el campo "user" y el mensaje "must exist"
+    And la respuesta de error contiene el campo "post" y el mensaje "must exist"
 
   Scenario: CP05 Crear comentario para una publicación existente
     Given que preparo un comentario válido
